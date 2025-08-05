@@ -168,5 +168,5 @@ mongoose.connect('mongodb+srv://dcadmin:dcadmin@power-forecast.hmbxdit.mongodb.n
   .then(() => console.log('📊 MongoDB connected'))
   .catch(err => console.error('MongoDB connection error:', err));
 
-const PORT = 1234;
+const PORT = process.env.PORT || 1234;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
