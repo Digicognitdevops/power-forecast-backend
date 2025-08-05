@@ -111,7 +111,7 @@ class EnergyForecastModel {
   }
 }
 const forecastModel = new EnergyForecastModel();
-app.get('/health', async() => {
+app.get('/health', async(req,res) => {
 try {
    res.status(200).json({ message: true });
 } catch (error) {
